@@ -4,13 +4,13 @@ const jwt = require('jsonwebtoken');
 
 const createToken = (_id) => {
 
-   return  jwt.sign({_id},process.env.SECRET,{expiresIn : '3d'}) ;
+   return  jwt.sign({_id}, process.env.SECRET, {expiresIn : '3d'}) ;
 }
 
 module.exports.login_post = async (req,res) => {
     
     const {email , password } = req.body ;
-
+    // console.log(process.env.SECRET) ;
     try {
         const user = await User.login(email,password);
 
@@ -18,7 +18,7 @@ module.exports.login_post = async (req,res) => {
 
         res.status(200).json({email,token}) ;
     } catch (error) {
-        res.status(400).json({error : error.message});
+        res.status(400).json({error : error.message,val : process.env.SECRET});
     }
 }
 
