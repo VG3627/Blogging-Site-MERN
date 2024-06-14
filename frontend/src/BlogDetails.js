@@ -12,7 +12,7 @@ const BlogDetails = () => {
     const {state} = useContext(AuthContext);
     const handleClick = async () => {
 
-        const res = await fetch(`http://localhost:3069/api/blogs/${id}`,
+        const res = await fetch(`https://blogging-site-mern-api-git-master-vg3627s-projects.vercel.app/api/blogs/${id}`,
             {
                 method: 'DELETE',
                 headers: {'authorization' : `Bearer ${state.user.token}`}
