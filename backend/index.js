@@ -11,15 +11,7 @@ const userRoutes = require('./routes/userRoutes');
 const app = express() 
 
 app.use(express.json());
-<<<<<<< HEAD
 app.use(cors( async(req,res) => {
-=======
-app.use(cors(
-    {
-       origin:["https://blogging-site-mern-api-git-master-vg3627s-projects.vercel.app"],
-       methods: ['POST', 'GET', 'DELETE']
-    }
->>>>>>> ec6dc3434a21fd52559130be9fb43343586e4cff
     
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Access-Control-Allow-Origin', '*'); // Adjust this to your frontend URL in production
