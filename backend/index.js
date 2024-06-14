@@ -11,11 +11,11 @@ const userRoutes = require('./routes/userRoutes');
 const app = express() 
 
 app.use(express.json());
-app.use(cors(), {
+app.use(cors({
     origin : ["https://blogging-site-mern-olqljdpk9-vg3627s-projects.vercel.app/"],
     methods: ["POST", "GET", "DELETE"],
     credentials:true
-});
+}));
 app.use('/api/blogs', blogRoutes)
 
 const dburl = process.env.MONGO_URI ;
