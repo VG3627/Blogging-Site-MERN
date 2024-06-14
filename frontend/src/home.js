@@ -6,7 +6,7 @@ import BlogList from "./BlogList";
 
 const Home = () => {
    
- const {data, isLoading, error} = useFetch('https://blogging-site-mern-api-git-master-vg3627s-projects.vercel.app/api/blogs');   
+ const {data, isLoading, error} = useFetch('https://blogging-site-mern-api.vercel.app/');   
     return (
 
 

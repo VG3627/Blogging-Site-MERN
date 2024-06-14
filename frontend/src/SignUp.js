@@ -18,7 +18,7 @@ const SignUp = () => {
     
     
     try {
-        const res = await fetch('https://blogging-site-mern-api-git-master-vg3627s-projects.vercel.app/signup',
+        const res = await fetch('https://blogging-site-mern-api.vercel.app/signup',
             {
                 method:'POST',
                 headers:{ "Content-Type" : "application/json"},

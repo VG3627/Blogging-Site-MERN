@@ -12,7 +12,7 @@ const BlogDetails = () => {
     const {state} = useContext(AuthContext);
     const handleClick = async () => {
 
-        const res = await fetch(`https://blogging-site-mern-api-git-master-vg3627s-projects.vercel.app/api/blogs/${id}`,
+        const res = await fetch(`https://blogging-site-mern-api.vercel.app/api/blogs/${id}`,
             {
                 method: 'DELETE',
                 headers: {'authorization' : `Bearer ${state.user.token}`}
@@ -31,7 +31,7 @@ const BlogDetails = () => {
     }
 
 
-    const { data: blog, isLoading, error } = useFetch(`http://localhost:3069/api/blogs/${id}`)
+    const { data: blog, isLoading, error } = useFetch(`https://blogging-site-mern-api.vercel.app/api/blogs/${id}`)
 
 
     return (
@@ -49,7 +49,7 @@ const BlogDetails = () => {
                     <p className="text-center mb-3">author : {blog.Author}</p>
                     <div className="text-start mb-4">{blog.body}</div>
                     {state.user && blog.Author === state.user.email && (<div className="d-flex justify-content-center">
-                        <Button variant="outline-light" onClick={handleClick}>
+                        <Button className="mb-3" variant="outline-light" onClick={handleClick}>
                             Delete
                         </Button>
                     </div>)}

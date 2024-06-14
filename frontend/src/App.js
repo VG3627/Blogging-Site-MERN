@@ -7,6 +7,7 @@ import Login from './Login';
 import SignUp from './SignUp';
 import { useContext } from 'react';
 import { AuthContext } from './Context/authContext';
+import { Container } from 'react-bootstrap';
 function App() {
 
 
@@ -18,7 +19,8 @@ function App() {
 
   return (
     <Router>
-      <div className="App bg-dark text-white vh-100 d-flex flex-column">
+     
+      <div fluid className="App bg-dark text-white vh-100 d-flex flex-column">
         <NavBar  />
         <div className="content">
           <Routes>
@@ -30,6 +32,7 @@ function App() {
           </Routes>
         </div>
       </div>
+      
     </Router>
   );
 }

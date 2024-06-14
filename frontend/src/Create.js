@@ -35,7 +35,7 @@ const Create = () => {
          console.log(blog) ;
 
          
-         fetch('https://blogging-site-mern-api-git-master-vg3627s-projects.vercel.app/api/blogs', {
+         fetch('https://blogging-site-mern-api.vercel.app/api/blogs', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

@@ -1,7 +1,9 @@
 
-
-
+.App {
+  height: 100vh; /* Set to viewport height or any other height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
 .list-group-item-hover:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease-in-out;
-  }
+}
