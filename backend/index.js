@@ -12,7 +12,7 @@ const app = express()
 
 app.use(express.json());
 app.use(cors({
-    origin : "https://blogging-site-mern-api.vercel.app/",
+    origin : "*",
     methods: ["POST", "GET", "DELETE"],
     credentials:true
 }));
