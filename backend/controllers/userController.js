@@ -10,7 +10,7 @@ const createToken = (_id) => {
 module.exports.login_post = async (req,res) => {
     
     const {email , password } = req.body ;
-
+    // console.log(process.env.SECRET) ;
     try {
         const user = await User.login(email,password);
 
