@@ -18,7 +18,7 @@ module.exports.login_post = async (req,res) => {
 
         res.status(200).json({email,token}) ;
     } catch (error) {
-        res.status(400).json({error : process.env.SECRET});
+        res.status(400).json({error : error.message});
     }
 }
 
