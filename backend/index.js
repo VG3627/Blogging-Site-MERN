@@ -14,8 +14,7 @@ app.use(express.json());
 app.use(cors(
     {
        origin:["https://blogging-site-mern-api-git-master-vg3627s-projects.vercel.app"],
-       methods: ['POST', 'GET', 'DELETE'],
-       credentials: true
+       methods: ['POST', 'GET', 'DELETE']
     }
     
 ));
