@@ -11,11 +11,7 @@ const userRoutes = require('./routes/userRoutes');
 const app = express() 
 
 app.use(express.json());
-app.use(cors({
-    origin : "*",
-    methods: ["POST", "GET", "DELETE"],
-    credentials:true
-}));
+app.use(cors());
 app.use('/api/blogs', blogRoutes)
 
 const dburl = process.env.MONGO_URI ;
