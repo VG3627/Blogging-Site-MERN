@@ -9,7 +9,7 @@ const Create = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const navigate = useNavigate() ;
-    const url = process.env.REACT_APP_API_URL ;
+    const url = process.env.REACT_APP_API_URL ; 
     const { state } = useContext(AuthContext) ;
     if(!state.user)
     {

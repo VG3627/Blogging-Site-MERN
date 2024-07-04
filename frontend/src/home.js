@@ -5,7 +5,7 @@ import BlogList from "./BlogList";
 
 
 const Home = () => {
-    const url = process.env.REACT_APP_API_URL ;
+    const url = process.env.REACT_APP_API_URL ; 
  const {data, isLoading, error} = useFetch(`${url}/`);   
     return (
 

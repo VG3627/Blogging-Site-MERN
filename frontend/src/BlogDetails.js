@@ -8,7 +8,7 @@ const BlogDetails = () => {
 
     const { id } = useParams();
     const navigate = useNavigate();
-    const url = process.env.REACT_APP_API_URL ;
+    const url = process.env.REACT_APP_API_URL ; 
     const {state} = useContext(AuthContext);
     const handleClick = async () => {
 
