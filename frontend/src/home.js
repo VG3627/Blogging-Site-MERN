@@ -5,8 +5,8 @@ import BlogList from "./BlogList";
 
 
 const Home = () => {
-   
- const {data, isLoading, error} = useFetch('https://blogging-site-mern-api.vercel.app/');   
+    const url = process.env.REACT_APP_API_URL ;
+ const {data, isLoading, error} = useFetch(`${url}/`);   
     return (
 
 

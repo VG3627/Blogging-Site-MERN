@@ -10,15 +10,10 @@
         {
           "src": "/(.*)",
           "dest": "/index.js",
-<<<<<<< HEAD
-          "headers": {
-            "Access-Control-Allow-Origin": "https://blogging-site-mern-api.vercel.app/",
-            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-=======
+
            "headers": {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "GET ,POST, DELETE, OPTIONS",
->>>>>>> d16ce030db2c92127efbf0d7a2b918f72698e217
             "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept, Authorization",
             "Access-Control-Allow-Credentials": "true"
           }

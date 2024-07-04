@@ -9,7 +9,7 @@ const Create = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const navigate = useNavigate() ;
-    
+    const url = process.env.REACT_APP_API_URL ;
     const { state } = useContext(AuthContext) ;
     if(!state.user)
     {
@@ -35,7 +35,7 @@ const Create = () => {
          console.log(blog) ;
 
          
-         fetch('https://blogging-site-mern-api.vercel.app/api/blogs', {
+         fetch(`${url}/api/blogs`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

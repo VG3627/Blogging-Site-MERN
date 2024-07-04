@@ -8,11 +8,11 @@ const BlogDetails = () => {
 
     const { id } = useParams();
     const navigate = useNavigate();
-
+    const url = process.env.REACT_APP_API_URL ;
     const {state} = useContext(AuthContext);
     const handleClick = async () => {
 
-        const res = await fetch(`https://blogging-site-mern-api.vercel.app/api/blogs/${id}`,
+        const res = await fetch(`${url}/api/blogs/${id}`,
             {
                 method: 'DELETE',
                 headers: {'authorization' : `Bearer ${state.user.token}`}
@@ -30,8 +30,8 @@ const BlogDetails = () => {
         }
     }
 
-
-    const { data: blog, isLoading, error } = useFetch(`https://blogging-site-mern-api.vercel.app/api/blogs/${id}`)
+  
+    const { data: blog, isLoading, error } = useFetch(`${url}/api/blogs/${id}`)
 
 
     return (

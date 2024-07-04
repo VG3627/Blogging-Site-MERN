@@ -10,12 +10,12 @@ const Login = () => {
   const [errors, setErrors] = useState('');
   const navigate = useNavigate() ;
   const {dispatch} = useContext(AuthContext) ;
-
+  const url = process.env.REACT_APP_API_URL ;
   const handleSubmit =  async (e) => {
     e.preventDefault();
     
     try {
-        const res = await fetch('https://blogging-site-mern-api.vercel.app/login',
+        const res = await fetch(`${url}/login`,
             {
                 method:'POST',
                 headers:{"Content-Type" : "application/json"},

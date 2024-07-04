@@ -12,13 +12,14 @@ const SignUp = () => {
   const navigate = useNavigate() ;
   const { dispatch } = useContext(AuthContext) ;
 
-
+  //  console.log(9) ;
+  const url = process.env.REACT_APP_API_URL ;
   const handleSubmit = async (e) => {
     e.preventDefault() ;
     
     
     try {
-        const res = await fetch('https://blogging-site-mern-api.vercel.app/signup',
+        const res = await fetch(`${url}/signup`,
             {
                 method:'POST',
                 headers:{ "Content-Type" : "application/json"},
@@ -26,11 +27,12 @@ const SignUp = () => {
             }
         )
         const data = await res.json() ;
-        console.log(data) ;
+        // console.log(data) ;
+        
         if(data.email)
         {
-          localStorage.setItem('user',JSON.stringify(data))
           dispatch({type:'LOGIN',payload: data}) ;
+         
           navigate('/');
         }
         else
