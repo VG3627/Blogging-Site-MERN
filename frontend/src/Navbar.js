@@ -25,7 +25,7 @@ const NavBar = () => {
 
         <div className="NavBar">
             <Navbar expand="lg" className="bg-body-tertiary mb-3" data-bs-theme="dark" style={{ fontFamily: "merryweather" }}>
-                <Navbar.Brand >BlogSphere</Navbar.Brand>
+                <Navbar.Brand >Blogify</Navbar.Brand>
                 <div className="links">
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to="/">Home</Nav.Link>
